@@ -1,0 +1,52 @@
+// fonts
+@mixin f-hero {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+@mixin f-h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+@mixin f-h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+@mixin f-h3-caps {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+}
+
+@mixin f-h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+@mixin f-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+@mixin f-list {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+@mixin f-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}   
+
+// 
+
