@@ -1,0 +1,173 @@
+@use "./mixins" as mx;
+@use "./variables" as var;
+@use "sass:map";  
+
+
+header {
+    font-family: "montserrat", sans-serif;
+    background: linear-gradient(map.get(var.$gradient,"main"));
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+// services
+
+.services {
+
+}
+
+.services-helper {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.services-title {
+    margin-bottom: 30px;
+}
+
+// services main
+
+.services-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;     
+}
+
+.services-main-title {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.services-main-title-text {
+    @include mx.f-h3-caps;  
+    text-transform: uppercase;
+    color: map.get(var.$c-active, "regular");
+}
+
+
+.services-main-title-icon {
+    width: 12px;
+    height: 12px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+
+// 
+
+.services-main-title:hover {
+    .services-main-title-icon-hover {
+        display: flex;
+    }
+    .services-main-title-icon-default {
+        display: none;
+    } 
+    .services-main-title-text {
+        color: map.get(var.$c-accent, "accent");
+    }
+}
+
+// 
+
+.services-main-title-icon-hover {
+    display: none;
+}
+
+.services-main-title-icon-default {
+
+}
+
+.services-main-subtitle-text {
+    @include mx.f-hero;
+    background: linear-gradient(map.get(var.$gradient, "red-text"));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+// services-list
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.services-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-list-item-icon-background {
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+    
+.services-list-item-icon {
+
+}
+
+.services-list-item-title {
+    @include mx.f-h3;
+    color: map.get(var.$c-active, "regular");
+    margin-bottom: 15px;
+}
+
+.services-list-item-subtitle {
+    @include mx.f-paragraph;
+    color: white;
+}   
+
+
+// MEDIA SERVICES
+
+// 375
+@media (min-width: map.get(var.$viewport, "mobile")) {
+
+}
+// 768
+@media (min-width: map.get(var.$viewport, "tablet")) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        padding-bottom: 60px;
+    }
+    .services-title {
+        margin-bottom: 60px;
+    }
+    .services-helper {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+// 1024
+@media (min-width: map.get(var.$viewport, "tablethd")) {
+    .services-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+// 1440
+@media (min-width: map.get(var.$viewport, "desktop")) {
+ 
+}
+// 1920
+@media (min-width: map.get(var.$viewport, "desktophd")) {
+    .services-helper {
+        margin-left: 160px;
+        margin-right: 160px;
+    }
+}
+
+
+
+
+
+
+// 
