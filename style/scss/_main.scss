@@ -1,0 +1,171 @@
+@use "./mixins" as mx;
+@use "./variables" as var;
+@use "sass:map";  
+
+main {
+    font-family: "montserrat", sans-serif;
+}
+// 
+
+// ad
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.ad-helper {
+
+}
+
+.ad-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.ad-title-text {
+    @include mx.f-h3-caps;
+    text-transform: uppercase;
+    color: map.get(var.$c-main, "regular");
+}
+
+.ad-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.ad-list-item {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.hillel {
+    background-color: #1C4280;
+}
+
+.wannabiz {
+    background-color: #143646;
+}
+
+.tapgerine {
+    background-color: #F48B30;
+}
+
+.dlook {
+    background-color: #9E4DC3;
+}
+
+.orangear {
+    background-color: #FD9339;   
+}
+
+.addtelligent {
+    background-color: #E2E2E4;
+}
+
+.clickky {
+    background-color: #C71C36;
+    display: none;
+}
+
+.ecolease {
+    background-color: #DCF3F9;
+    display: none;
+}
+
+.infratek {
+    background-color: #EAEAEA;
+    display: none;
+}
+
+.sitipark {
+    background-color: #282240;  
+    display: none; 
+}
+
+.art-print {
+    background-color: #1D4568;
+    display: none;
+}
+
+.ultimatecard {
+    background-color: #000000;
+    display: none;
+}
+
+// MEDIA AD 
+
+// 375
+@media (min-width: map.get(var.$viewport, "mobile")) {
+
+}
+// 768
+@media (min-width: map.get(var.$viewport, "tablet")) {
+    .ad-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .clickky {
+        display: flex;
+    }
+    
+    .ecolease {
+        display: flex;
+    }
+    
+    .infratek {
+        display: flex;
+    }
+    
+    .sitipark {
+        display: flex;
+    }
+    
+    .art-print {
+        display: flex;
+    }
+    
+    .ultimatecard {
+        display: flex;
+    }
+    
+}
+// 1024
+@media (min-width: map.get(var.$viewport, "tablethd")) {
+    .ad-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+// 1440
+@media (min-width: map.get(var.$viewport, "desktop")) {
+
+}
+// 1920
+@media (min-width: map.get(var.$viewport, "desktophd")) {
+    .ad-helper {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .hillel {
+        border-top-left-radius: 12px;
+    }
+
+    .dlook { 
+        border-top-right-radius: 12px;
+    }
+
+    .infratek {
+        border-bottom-left-radius: 12px;
+    }
+    .ultimatecard {
+        border-bottom-right-radius: 12px;
+    }
+}
+
+
